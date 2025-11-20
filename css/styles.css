@@ -1,0 +1,201 @@
+/* styles.css - shared stylesheet for BLTArena site */
+
+/* CSS variables for easy theming */
+:root{
+  --bg: #F7F9FB;
+  --card: #ffffff;
+  --accent: #2b6cb0; /* blue */
+  --accent-2: #2c7a7b; /* teal */
+  --muted: #6b7280;
+  --radius: 12px;
+  --max-width: 1100px;
+  --shadow: 0 6px 20px rgba(17,24,39,0.06);
+  --container-padding: 20px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#111827;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* layout */
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:var(--container-padding);
+}
+
+/* header / nav */
+.header{
+  background:linear-gradient(90deg, rgba(43,108,176,0.06), rgba(44,122,123,0.03));
+  border-bottom: 1px solid rgba(17,24,39,0.04);
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter: blur(4px);
+}
+.header .inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:14px 0;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:inherit;
+}
+.logo{
+  width:48px;
+  height:48px;
+  border-radius:10px;
+  background:linear-gradient(180deg,var(--accent),var(--accent-2));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:700;
+  box-shadow:var(--shadow);
+  flex:0 0 48px;
+}
+.nav{
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
+.nav a{
+  text-decoration:none;
+  color:var(--muted);
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:600;
+}
+.nav a:hover{color:var(--accent); background: rgba(43,108,176,0.04)}
+
+/* hero */
+.hero{
+  display:grid;
+  grid-template-columns: 1fr 420px;
+  gap:24px;
+  align-items:center;
+  margin:26px 0;
+}
+.hero-card{
+  background:var(--card);
+  padding:26px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.hero h1{
+  margin:0 0 8px 0;
+  font-size:28px;
+}
+.hero p{margin:0 0 18px;color:var(--muted)}
+
+.cta-row{display:flex; gap:12px; flex-wrap:wrap;}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+}
+.btn-primary{
+  background:var(--accent);
+  color:white;
+}
+.btn-outline{
+  border:1px solid rgba(17,24,39,0.06);
+  color:var(--accent-2);
+  background:transparent;
+}
+
+/* quick cards */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap:16px;
+  margin-top:18px;
+}
+.card{
+  background:var(--card);
+  padding:14px;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+.small{font-size:14px;color:var(--muted)}
+
+/* gallery thumbnails */
+.gallery-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+  gap:10px;
+}
+.gallery-grid img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+}
+
+/* page content styles */
+.page-title{font-size:22px;margin:8px 0 14px 0}
+.section{margin:18px 0}
+.two-col{display:grid; grid-template-columns: 1fr 320px; gap:18px; align-items:start}
+
+/* event list */
+.event{
+  border-left: 4px solid rgba(43,108,176,0.12);
+  padding:12px 12px;
+  border-radius:8px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.6), transparent);
+}
+
+/* photos page */
+.photo-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap:12px;
+}
+.photo-grid img{width:100%; height:160px; object-fit:fill; border-radius:12px}
+
+/* footer */
+.footer{
+  margin-top:28px;
+  padding:20px 0;
+  border-top:1px solid rgba(17,24,39,0.04);
+  color:var(--muted);
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.contact-list{display:flex; gap:14px; align-items:center}
+.small-muted{font-size:13px;color:var(--muted)}
+
+/* responsive tweaks */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .nav{display:none}
+  .logo{width:40px;height:40px}
+}
+
+h2{
+    color: red;
+}

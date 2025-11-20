@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BLT Arena — Events</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container inner">
+      <a class="brand" href="../index.html">
+        <div class="logo">BLT</div>
+        <div>
+          <div style="font-weight:700">BLT Arena</div>
+          <div style="font-size:12px;color:var(--muted)">Events</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="arena.html">Arena Info</a>
+        <a href="photos.html">Photos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="page-title">Upcoming Events</div>
+
+      <!-- Example event blocks — copy / paste as needed -->
+      <div class="card event">
+        <div style="font-weight:700">CLOSED</div>
+        <div class="small">Sundays 2pm-4pm</div>
+        <div style="margin-top:8px;"></div>
+      </div>
+
+      <div class="card event" style="margin-top:12px;">
+        <div style="font-weight:700">SVH</div>
+        <div class="small">3rd Saturady of every month January-April</div>
+        <div style="margin-top:8px;">More details to come.</div>
+      </div>
+      <div class="card event" style="margin-top:12px;">
+        <div style="font-weight:700">Barrel Race and Pole Bendind</div>
+        <div class="small">December 14</div>
+        <div style="margin-top:8px;">More details to come.</div>
+      </div>
+      <div class="card event" style="margin-top:12px;">
+        <div style="font-weight:700">Barrel Race</div>
+        <div class="small">April 26</div>
+        <div style="margin-top:8px;">More details to come.</div>
+      </div>
+      <div class="card" style="margin-top:12px;">
+        <div style="font-weight:700">How to host an event</div>
+        <div class="small">Email: <a href="mailto:marcilemke@yahoo.com">marcilemke@yahoo.com</a> or call <a href="tel:4259031978">425-903-1978</a></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="small-muted">© <span id="year2"></span> BLT Arena</div>
+      <div class="small-muted"><a href="index.html">Home</a> • <a href="arena.html">Arena Info</a></div>
+    </footer>
+  </main>
+
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+</body>
+</html>
